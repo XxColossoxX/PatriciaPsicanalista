@@ -51,3 +51,13 @@
   transform: translateY(0);
   opacity: 1;
 }
+
+/* Rolagem suave ao navegar pelos links do header */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Transição do carrossel de depoimentos */
+#depoimentos-track {
+  will-change: transform;
+}

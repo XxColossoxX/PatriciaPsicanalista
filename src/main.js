@@ -52,17 +52,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  // Animação de rolagem suave ao clicar nos links do header
+  document.querySelectorAll('header a[href^="#"], #mobile-menu a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const href = this.getAttribute('href');
       if (href !== '#' && href.length > 1) {
         e.preventDefault();
         const target = document.querySelector(href);
         if (target) {
-          const headerOffset = 80;
+          const headerOffset = 100;
           const elementPosition = target.getBoundingClientRect().top;
-          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+          const offsetPosition = elementPosition + window.scrollY - headerOffset;
 
           window.scrollTo({
             top: offsetPosition,
@@ -86,6 +86,60 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+
+  // Carrossel de depoimentos
+  const depoimentosTrack = document.getElementById('depoimentos-track');
+  const depoimentosPrev = document.getElementById('depoimentos-prev');
+  const depoimentosNext = document.getElementById('depoimentos-next');
+  const depoimentosDots = document.getElementById('depoimentos-dots');
+
+  if (depoimentosTrack && depoimentosDots) {
+    const slides = depoimentosTrack.querySelectorAll('.depoimento-slide');
+    const total = slides.length;
+    let current = 0;
+    let autoInterval;
+
+    function goTo(index) {
+      current = ((index % total) + total) % total;
+      depoimentosTrack.style.transform = `translateX(-${current * 100}%)`;
+      depoimentosDots.querySelectorAll('button').forEach((btn, i) => {
+        btn.classList.toggle('bg-brand-500', i === current);
+        btn.classList.toggle('bg-brand-200', i !== current);
+      });
+    }
+
+    function next() {
+      goTo(current + 1);
+    }
+
+    function prev() {
+      goTo(current - 1);
+    }
+
+    // Criar dots
+    for (let i = 0; i < total; i++) {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = `w-3 h-3 rounded-full transition-colors ${i === 0 ? 'bg-brand-500' : 'bg-brand-200'}`;
+      btn.setAttribute('aria-label', `Ir para depoimento ${i + 1}`);
+      btn.addEventListener('click', () => goTo(i));
+      depoimentosDots.appendChild(btn);
+    }
+
+    if (depoimentosPrev) depoimentosPrev.addEventListener('click', prev);
+    if (depoimentosNext) depoimentosNext.addEventListener('click', next);
+
+    // Auto-rotacionar a cada 6 segundos
+    function startAuto() {
+      autoInterval = setInterval(next, 6000);
+    }
+    function stopAuto() {
+      clearInterval(autoInterval);
+    }
+    startAuto();
+    depoimentosTrack.closest('section')?.addEventListener('mouseenter', stopAuto);
+    depoimentosTrack.closest('section')?.addEventListener('mouseleave', startAuto);
+  }
 
   // Contact Form WhatsApp Redirect
   const contactForm = document.getElementById('contact-form');

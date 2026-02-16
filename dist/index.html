@@ -13,6 +13,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap"
     rel="stylesheet">
+  <script type="module" crossorigin src="/assets/index-oWcfe0Tt.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BfgNNYZk.css">
 </head>
 
 <body class="bg-warm-50 text-brand-900 font-sans antialiased overflow-x-hidden">
@@ -21,69 +23,55 @@
   <header
     class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-white/20 shadow-sm"
     id="header">
-  <div class="container mx-auto px-6 py-2 flex justify-between items-center">
-    
-    <!-- Nome + Subtítulo -->
-    <div class="flex flex-col">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
       <a href="#" class="font-serif text-2xl md:text-3xl text-brand-700 tracking-wide">
         Patricia Ribeiro
       </a>
-      <p class="font-serif text-sm md:text-base text-brand-700 tracking-normal mt-0.5">
-        Online / Presencial
-      </p>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex space-x-8 items-center">
+        <a href="#home"
+          class="text-brand-600 hover:text-brand-800 transition-colors text-sm uppercase tracking-wider relative group">
+          Início
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-500 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#about"
+          class="text-brand-600 hover:text-brand-800 transition-colors text-sm uppercase tracking-wider relative group">
+          Sobre
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-500 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#services"
+          class="text-brand-600 hover:text-brand-800 transition-colors text-sm uppercase tracking-wider relative group">
+          Serviços
+          <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-500 transition-all duration-300 group-hover:w-full"></span>
+        </a>
+        <a href="#contact"
+          class="px-6 py-2 bg-brand-500 hover:bg-brand-600 text-white rounded-full transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm uppercase tracking-wider font-medium">
+          Agendar
+        </a>
+      </nav>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-brand-700 focus:outline-none transition-transform duration-200 hover:scale-110">
+        <svg id="menu-icon" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+        <svg id="close-icon" class="w-6 h-6 hidden transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
     </div>
 
-    <!-- Desktop Nav -->
-    <nav class="hidden md:flex space-x-6 items-center">
-      <a href="#home"
-        class="text-brand-600 hover:text-brand-800 transition-colors text-sm uppercase tracking-wider relative group">
-        Início
-        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-500 transition-all duration-300 group-hover:w-full"></span>
-      </a>
-      <a href="#about"
-        class="text-brand-600 hover:text-brand-800 transition-colors text-sm uppercase tracking-wider relative group">
-        Sobre
-        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-500 transition-all duration-300 group-hover:w-full"></span>
-      </a>
-      <a href="#services"
-        class="text-brand-600 hover:text-brand-800 transition-colors text-sm uppercase tracking-wider relative group">
-        Serviços
-        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-500 transition-all duration-300 group-hover:w-full"></span>
-      </a>
-      <a href="#depoimentos"
-        class="text-brand-600 hover:text-brand-800 transition-colors text-sm uppercase tracking-wider relative group">
-        Depoimentos
-        <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-brand-500 transition-all duration-300 group-hover:w-full"></span>
-      </a>
-      <a href="#contact"
-        class="px-4 py-1.5 bg-brand-500 hover:bg-brand-600 text-white rounded-full transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 text-sm uppercase tracking-wider font-medium">
-        Agendar
-      </a>
-    </nav>
-
-    <!-- Mobile Menu Button -->
-    <button id="menu-btn" class="md:hidden text-brand-700 focus:outline-none transition-transform duration-200 hover:scale-110">
-      <svg id="menu-icon" class="w-6 h-6 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-      </svg>
-      <svg id="close-icon" class="w-6 h-6 hidden transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-      </svg>
-    </button>
-  </div>
-
-  <!-- Mobile Nav -->
-  <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 absolute w-full top-full left-0 shadow-lg transform transition-all duration-300 ease-in-out">
-    <div class="flex flex-col px-6 py-3 space-y-1.5">
-      <a href="#home" class="text-brand-600 hover:text-brand-800 hover:bg-brand-50 block py-2 px-4 rounded-lg transition-all duration-200">Início</a>
-      <a href="#about" class="text-brand-600 hover:text-brand-800 hover:bg-brand-50 block py-2 px-4 rounded-lg transition-all duration-200">Sobre</a>
-      <a href="#services" class="text-brand-600 hover:text-brand-800 hover:bg-brand-50 block py-2 px-4 rounded-lg transition-all duration-200">Serviços</a>
-      <a href="#depoimentos" class="text-brand-600 hover:text-brand-800 hover:bg-brand-50 block py-2 px-4 rounded-lg transition-all duration-200">Depoimentos</a>
-      <a href="#contact" class="text-brand-500 font-medium hover:bg-brand-50 block py-2 px-4 rounded-lg transition-all duration-200">Agendar Consulta</a>
+    <!-- Mobile Nav -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-t border-gray-100 absolute w-full top-full left-0 shadow-lg transform transition-all duration-300 ease-in-out">
+      <div class="flex flex-col px-6 py-4 space-y-2">
+        <a href="#home" class="text-brand-600 hover:text-brand-800 hover:bg-brand-50 block py-3 px-4 rounded-lg transition-all duration-200">Início</a>
+        <a href="#about" class="text-brand-600 hover:text-brand-800 hover:bg-brand-50 block py-3 px-4 rounded-lg transition-all duration-200">Sobre</a>
+        <a href="#services" class="text-brand-600 hover:text-brand-800 hover:bg-brand-50 block py-3 px-4 rounded-lg transition-all duration-200">Serviços</a>
+        <a href="#contact" class="text-brand-500 font-medium hover:bg-brand-50 block py-3 px-4 rounded-lg transition-all duration-200">Agendar Consulta</a>
+      </div>
     </div>
-  </div>
-</header>
-
+  </header>
 
   <!-- Hero Section -->
   <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
@@ -95,7 +83,7 @@
       <div class="space-y-6 animate-slide-up">
         <span
           class="inline-block py-1 px-3 rounded-full bg-brand-50 text-brand-600 text-xs font-semibold tracking-widest uppercase border border-brand-100">
-          Psicanalista Clínica & Terapeuta
+          Psicanálise & Bem-estar
         </span>
         <h1 class="font-serif text-5xl md:text-6xl lg:text-7xl leading-tight text-brand-800">
           Cuidando da sua <br>
@@ -103,8 +91,8 @@
           com empatia.
         </h1>
         <p class="text-brand-600 text-lg md:text-xl max-w-lg leading-relaxed">
-
-          Psicanalista dedicada ao acolhimento e à escuta qualificada, oferecendo um espaço seguro para a compreensão de conflitos emocionais, autoconhecimento e desenvolvimento pessoal. Atua com ética, sigilo e respeito à singularidade de cada paciente.        </p>
+          Um espaço seguro para casais, crianças e desenvolvimento pessoal. Acolhimento especializado em Itatiba.
+        </p>
         <div class="pt-4 flex flex-col sm:flex-row gap-4">
           <a href="#contact"
             class="px-8 py-4 bg-brand-600 hover:bg-brand-700 text-white rounded-full transition-all shadow-lg hover:shadow-xl text-center font-medium transform hover:-translate-y-0.5">
@@ -119,11 +107,10 @@
       <div class="relative hidden md:block animate-fade-in group">
         <!-- Placeholder Image -->
         <div
-        class="relative w-full aspect-[4/5] rounded-tl-[100px] rounded-br-[100px] overflow-hidden shadow-2xl border-8 border-white">
-        <img src="dist/assets/imgPatricia.jpeg" alt="Psicanalista Patricia Ribeiro"
-          class="object-cover object-top w-full h-full transform transition-transform duration-700 group-hover:scale-105">
-      </div>
-      
+          class="relative w-full aspect-[4/5] rounded-tl-[100px] rounded-br-[100px] overflow-hidden shadow-2xl border-8 border-white">
+          <img src="/assets/imgPatricia-Bwhfn4LX-Bwhfn4LX.jpeg" alt="Psicanalista Patricia Ribeiro"
+            class="object-cover w-full h-full transform transition-transform duration-700 group-hover:scale-105">
+        </div>
         <!-- Decorative circle -->
         <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-accent-200 rounded-full -z-10 blur-xl"></div>
       </div>
@@ -137,17 +124,20 @@
         <!-- Mobile Image -->
         <div class="md:hidden mb-12 flex justify-center">
           <div class="relative w-64 aspect-[4/5] rounded-tl-[60px] rounded-br-[60px] overflow-hidden shadow-2xl border-8 border-white">
-            <img src="dist/assets/imgPatricia.jpeg" alt="Psicanalista Patricia Ribeiro"
-              class="object-cover object-top w-full h-full transform transition-transform duration-700 group-hover:scale-105">
+            <img src="dist/assets/img/imgPatricia.jpeg" alt="Psicanalista Patricia Ribeiro"
+              class="object-cover w-full h-full">
           </div>
-          
         </div>
         
         <div class="text-center mb-16">
           <h2 class="font-serif text-4xl md:text-5xl text-brand-800 mb-6">Patricia Ribeiro</h2>
           <div class="w-24 h-1 bg-brand-300 mx-auto rounded-full mb-8"></div>
           <p class="text-lg text-brand-600 leading-loose">
-            Sou Patrícia Ribeiro, psicanalista clínica. Atuo com escuta ética e acolhedora, auxiliando no tratamento da ansiedade, dependência emocional, traumas e conflitos relacionais. Meu compromisso é conduzir você a um processo profundo de autoconhecimento e transformação emocional.
+            Com anos de experiência em psicanálise clínica, dedico-me a oferecer um escuta qualificada e um ambiente
+            acolhedor.
+            Meu trabalho é pautado na ética e no compromisso com o bem-estar de cada paciente, auxiliando na compreensão
+            de si mesmo
+            e na superação de conflitos internos e relacionais.
           </p>
         </div>
       </div>
@@ -243,7 +233,7 @@
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
         <!-- Card 1: Casais -->
-        <div
+        <a href="casais.html"
           class="bg-white p-8 rounded-3xl shadow-md hover:shadow-2xl transition-all duration-300 group border border-brand-100 block hover:-translate-y-2 hover:border-brand-200">
           <div
             class="w-14 h-14 bg-brand-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-500 transition-all duration-300 group-hover:scale-110">
@@ -256,15 +246,12 @@
           </div>
           <h3 class="font-serif text-2xl text-brand-800 mb-3 group-hover:text-brand-600 transition-colors">Terapia de Casal</h3>
           <p class="text-brand-600 text-sm leading-relaxed">
-
-            Atuo na mediação de conflitos e no aprofundamento do diálogo conjugal, 
-            promovendo maturidade afetiva e fortalecimento do vínculo.
-          
+            Espaço para diálogo e reconstrução de vínculos, fortalecendo a relação e a compreensão mútua.
           </p>
-        </div>
+        </a>
 
         <!-- Card 2: Crianças -->
-        <div
+        <a href="infantil.html"
           class="bg-white p-8 rounded-3xl shadow-md hover:shadow-2xl transition-all duration-300 group border border-brand-100 block hover:-translate-y-2 hover:border-brand-200">
           <div
             class="w-14 h-14 bg-brand-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-500 transition-all duration-300 group-hover:scale-110">
@@ -274,16 +261,14 @@
                 d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
           </div>
-          <h3 class="font-serif text-2xl text-brand-800 mb-3 group-hover:text-brand-600 transition-colors">Crianças/Adolescente </h3>
+          <h3 class="font-serif text-2xl text-brand-800 mb-3 group-hover:text-brand-600 transition-colors">Infantil</h3>
           <p class="text-brand-600 text-sm leading-relaxed">
-            Atuo nos diversos transtornos emocionais e comportamentais, 
-            auxiliando na regulação das emoções e na melhoria das 
-            relações familiares e escolares.
+            Atendimento lúdico especializado para auxiliar no desenvolvimento emocional e enfrentamento de dificuldades.
           </p>
-        </div>
+        </a>
 
         <!-- Card 3: Autismo -->
-        <div
+        <a href="autismo.html"
           class="bg-white p-8 rounded-3xl shadow-md hover:shadow-2xl transition-all duration-300 group border border-brand-100 block hover:-translate-y-2 hover:border-brand-200">
           <div
             class="w-14 h-14 bg-brand-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-500 transition-all duration-300 group-hover:scale-110">
@@ -298,10 +283,10 @@
           <p class="text-brand-600 text-sm leading-relaxed">
             Acompanhamento dedicado e inclusivo, focado nas necessidades singulares e no potencial de cada indivíduo.
           </p>
-        </div>
+        </a>
 
         <!-- Card 4: Pessoal -->
-        <div
+        <a href="pessoal.html"
           class="bg-white p-8 rounded-3xl shadow-md hover:shadow-2xl transition-all duration-300 group border border-brand-100 block hover:-translate-y-2 hover:border-brand-200">
           <div
             class="w-14 h-14 bg-brand-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-500 transition-all duration-300 group-hover:scale-110">
@@ -315,187 +300,7 @@
           <p class="text-brand-600 text-sm leading-relaxed">
             Jornada de autoconhecimento para lidar com ansiedade, depressão e outros desafios do cotidiano.
           </p>
-        </div>
-
-        <!-- Card 5: Absuos -->
-        <div
-          class="bg-white p-8 rounded-3xl shadow-md hover:shadow-2xl transition-all duration-300 group border border-brand-100 block hover:-translate-y-2 hover:border-brand-200">
-          <div
-            class="w-14 h-14 bg-brand-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-500 transition-all duration-300 group-hover:scale-110">
-            <svg class="w-7 h-7 text-brand-600 group-hover:text-white transition-colors duration-300" 
-                fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7l7-4z"/>
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M12 8v4m0 4h.01"/>
-            </svg>
-          </div>
-          <h3 class="font-serif text-2xl text-brand-800 mb-3 group-hover:text-brand-600 transition-colors">Abusos</h3>
-          <p class="text-brand-600 text-sm leading-relaxed">
-            Experiências de abuso físico, emocional, psicológico ou sexual impactam profundamente a estrutura emocional e a forma de se relacionar consigo e com o outro.
-          </p>
-        </div>
-      
-        <!-- Card 6: Ansiedade -->
-        <div
-          class="bg-white p-8 rounded-3xl shadow-md hover:shadow-2xl transition-all duration-300 group border border-brand-100 block hover:-translate-y-2 hover:border-brand-200">
-          <div
-            class="w-14 h-14 bg-brand-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-500 transition-all duration-300 group-hover:scale-110">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-brand-600 group-hover:text-white transition-colors duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <title>brain-02</title>
-              <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
-                <path d="M4.222 21.995v-3.55c0-1.271-.333-1.932-.987-3.037A8.888 8.888 0 0 1 10.889 2a8.89 8.89 0 0 1 8.889 8.887c0 .58 0 .87.024 1.032c.058.388.24.722.417 1.068L22 16.441l-1.4.7c-.405.202-.608.303-.749.49s-.181.399-.26.82l-.008.042c-.183.968-.384 2.036-.95 2.71c-.2.237-.448.43-.727.567c-.461.225-1.028.225-2.162.225c-.525 0-1.051.012-1.576 0c-1.243-.031-2.168-1.077-2.168-2.29"/>
-                <path d="M14.388 10.532c-.426 0-.815-.162-1.11-.427m1.11.426c0 1.146-.664 2.235-1.942 2.235S10.504 13.854 10.504 15m3.884-4.469c2.15 0 2.15-3.35 0-3.35q-.294.001-.557.095c.105-2.498-3.496-3.176-4.312-.836m.985 1.857c0-.774-.39-1.456-.985-1.857m0 0c-1.852-1.25-4.32.993-3.146 2.993c-1.97.295-1.76 3.333.247 3.333a1.66 1.66 0 0 0 1.362-.712"/>
-              </g>
-            </svg>
-          </div>
-          <h3 class="font-serif text-2xl text-brand-800 mb-3 group-hover:text-brand-600 transition-colors">Ansiedade</h3>
-          <p class="text-brand-600 text-sm leading-relaxed">
-            A ansiedade pode se manifestar por preocupações excessivas, insônia, irritabilidade e sensação constante de tensão.
-        </div>
-
-        <!-- Card 7: Depressão -->
-        <div
-          class="bg-white p-8 rounded-3xl shadow-md hover:shadow-2xl transition-all duration-300 group border border-brand-100 block hover:-translate-y-2 hover:border-brand-200">
-          <div
-            class="w-14 h-14 bg-brand-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-500 transition-all duration-300 group-hover:scale-110">
-            <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-brand-600 group-hover:text-white transition-colors duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-              <title>depressed</title>
-              <g fill="none">
-                <path d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2s10 4.477 10 10"/>
-                <path stroke="currentColor" stroke-linecap="square" stroke-width="2" d="M22 12c0 5.523-4.477 10-10 10S2 17.523 2 12S6.477 2 12 2s10 4.477 10 10Z"/>
-                <path stroke="currentColor" stroke-linecap="square" stroke-width="2" d="m16.867 10.5-1.732-1m-6.268 0-1.732 1m1.4 5.5A4 4 0 0 1 12 14c1.48 0 2.773.804 3.465 2"/>
-              </g>
-            </svg>  
-          </div>
-          <h3 class="font-serif text-2xl text-brand-800 mb-3 group-hover:text-brand-600 transition-colors">Depressão</h3>
-          <p class="text-brand-600 text-sm leading-relaxed">
-            A terapia oferece um espaço seguro para compreender essa dor, acolher o que está ferido e reconstruir, passo a passo, o sentido e a vitalidade da vida.
-        </div>
-
-        <!-- Card 8: Depoendencia emocional -->
-        <div
-        class="bg-white p-8 rounded-3xl shadow-md hover:shadow-2xl transition-all duration-300 group border border-brand-100 block hover:-translate-y-2 hover:border-brand-200">
-        <div
-          class="w-14 h-14 bg-brand-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-brand-500 transition-all duration-300 group-hover:scale-110">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-brand-600 group-hover:text-white transition-colors duration-300" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-            <title>heartbreak</title>
-            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5">
-              <path d="M10.41 19.968C7.59 17.858 2 13.035 2 8.694C2 5.826 4.105 3.5 7 3.5c1.5 0 3 .5 5 2.5c2-2 3.5-2.5 5-2.5c2.895 0 5 2.326 5 5.194c0 4.34-5.59 9.164-8.41 11.274c-.95.71-2.23.71-3.18 0"/>
-              <path d="M12 5.999L14 9l-2.5 3l2 2l-1 2"/>
-            </g>
-          </svg>
-           
-        </div>
-        <h3 class="font-serif text-2xl text-brand-800 mb-3 group-hover:text-brand-600 transition-colors">Dependência Emocional</h3>
-        <p class="text-brand-600 text-sm leading-relaxed">
-          A terapia auxilia na reconstrução da autoestima e no desenvolvimento da autonomia emocional, promovendo vínculos mais saudáveis e conscientes.
-      </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Depoimentos Section -->
-  <section id="depoimentos" class="py-24 bg-white relative overflow-hidden">
-    <div class="container mx-auto px-6">
-      <div class="text-center mb-16">
-        <span class="text-brand-500 font-semibold tracking-wider uppercase text-sm">O que dizem</span>
-        <h2 class="font-serif text-4xl md:text-5xl text-brand-800 mt-3">Depoimentos</h2>
-        <div class="w-24 h-1 bg-brand-300 mx-auto rounded-full mt-6"></div>
-      </div>
-
-      <div class="max-w-4xl mx-auto relative">
-        <!-- Carrossel -->
-        <div class="overflow-hidden rounded-2xl shadow-xl border border-brand-100">
-          <div id="depoimentos-track" class="flex transition-transform duration-500 ease-in-out">
-            <!-- Depoimento 1 -->
-            <div class="depoimento-slide min-w-full px-8 md:px-16 py-12 md:py-16 bg-gradient-to-br from-brand-50 to-white">
-              <div class="flex flex-col items-center text-center">
-                <div class="w-16 h-16 rounded-full bg-brand-200 flex items-center justify-center mb-6 text-brand-600">
-                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                </div>
-                <blockquote class="text-lg md:text-xl text-brand-700 leading-relaxed italic mb-6 font-serif">
-                  "Quando comecei a fazer terapia com a Patrícia, eu estava completamente perdida. A ansiedade me paralisava e a tristeza parecia não ter fim. Aos poucos, com cada sessão, fui entendendo minhas emoções e aprendendo a lidar com meus pensamentos. Hoje me sinto muito mais leve e confiante. Sou grata por ter encontrado alguém tão empática e profissional."
-                </blockquote>
-                <cite class="text-brand-600 font-medium not-italic">— Juliana, 28 anos</cite>
-              </div>
-            </div>
-            <!-- Depoimento 2 -->
-            <div class="depoimento-slide min-w-full px-8 md:px-16 py-12 md:py-16 bg-gradient-to-br from-brand-50 to-white">
-              <div class="flex flex-col items-center text-center">
-                <div class="w-16 h-16 rounded-full bg-brand-200 flex items-center justify-center mb-6 text-brand-600">
-                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                </div>
-                <blockquote class="text-lg md:text-xl text-brand-700 leading-relaxed italic mb-6 font-serif">
-                  "Sempre me via presa em relacionamentos que me faziam mal. Eu sabia que precisava mudar, mas não conseguia sozinha. A terapia com a Patrícia me ajudou a enxergar meu valor, a estabelecer limites e a me amar de verdade. Nunca me senti julgada, apenas acolhida."
-                </blockquote>
-                <cite class="text-brand-600 font-medium not-italic">— Lívia, 16 anos</cite>
-              </div>
-            </div>
-            <!-- Depoimento 3 -->
-            <div class="depoimento-slide min-w-full px-8 md:px-16 py-12 md:py-16 bg-gradient-to-br from-brand-50 to-white">
-              <div class="flex flex-col items-center text-center">
-                <div class="w-16 h-16 rounded-full bg-brand-200 flex items-center justify-center mb-6 text-brand-600">
-                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                </div>
-                <blockquote class="text-lg md:text-xl text-brand-700 leading-relaxed italic mb-6 font-serif">
-                  "No começo, eu achava que ninguém ia entender meus problemas. Mas a Patrícia me ouviu de verdade e me ajudou a lidar com a pressão da escola, das redes sociais e da família. Hoje eu me aceito mais e consigo me expressar sem medo."
-                </blockquote>
-                <cite class="text-brand-600 font-medium not-italic">— Marcos, 35 anos</cite>
-              </div>
-            </div>
-            <!-- Depoimento 4 -->
-            <div class="depoimento-slide min-w-full px-8 md:px-16 py-12 md:py-16 bg-gradient-to-br from-brand-50 to-white">
-              <div class="flex flex-col items-center text-center">
-                <div class="w-16 h-16 rounded-full bg-brand-200 flex items-center justify-center mb-6 text-brand-600">
-                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                </div>
-                <blockquote class="text-lg md:text-xl text-brand-700 leading-relaxed italic mb-6 font-serif">
-                  "Perder alguém que amamos é devastador. A Dra Patrícia me acompanhou nesse processo com tanta sensibilidade que pude atravessar minha dor sem me sentir sozinha. Aprendi a honrar minhas lembranças sem me afogar na tristeza."
-                </blockquote>
-                <cite class="text-brand-600 font-medium not-italic">— Roberto, 42 anos</cite>
-              </div>
-            </div>
-            <!-- Depoimento 4 -->
-            <div class="depoimento-slide min-w-full px-8 md:px-16 py-12 md:py-16 bg-gradient-to-br from-brand-50 to-white">
-              <div class="flex flex-col items-center text-center">
-                <div class="w-16 h-16 rounded-full bg-brand-200 flex items-center justify-center mb-6 text-brand-600">
-                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                </div>
-                <blockquote class="text-lg md:text-xl text-brand-700 leading-relaxed italic mb-6 font-serif">
-                  "Minha família estava sempre em conflito, e eu não sabia mais o que fazer. As sessões com a Dra Patrícia Ribeiro me ensinaram a comunicar meus sentimentos de forma saudável e a entender a perspectiva dos outros. Hoje temos mais harmonia e respeito em casa."
-                </blockquote>
-                <cite class="text-brand-600 font-medium not-italic">— Carla, 37 anos</cite>
-              </div>
-            </div>
-            <!-- Depoimento 5 -->
-            <div class="depoimento-slide min-w-full px-8 md:px-16 py-12 md:py-16 bg-gradient-to-br from-brand-50 to-white">
-              <div class="flex flex-col items-center text-center">
-                <div class="w-16 h-16 rounded-full bg-brand-200 flex items-center justify-center mb-6 text-brand-600">
-                  <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
-                </div>
-                <blockquote class="text-lg md:text-xl text-brand-700 leading-relaxed italic mb-6 font-serif">
-                  "Eu sempre quis terapia, mas minha rotina não permitia ir presencialmente. Com a Dra Patrícia, pude ter sessões online, no conforto da minha casa bem longe de São Paulo e sem perder a conexão e a profundidade das conversas isso não impediu em nada ela foi muito profissional e paciente que pude sentir que cada sessão fazia diferença real na minha vida,super recomendo "
-                </blockquote>
-                <cite class="text-brand-600 font-medium not-italic">— Thiago, 31 anos</cite>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Botões e indicadores -->
-        <div class="flex items-center justify-center gap-4 mt-8">
-          <button type="button" id="depoimentos-prev" class="w-12 h-12 rounded-full bg-brand-100 hover:bg-brand-200 text-brand-700 flex items-center justify-center transition-colors" aria-label="Depoimento anterior">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-          </button>
-          <div id="depoimentos-dots" class="flex gap-2">
-            <!-- preenchido por JS -->
-          </div>
-          <button type="button" id="depoimentos-next" class="w-12 h-12 rounded-full bg-brand-100 hover:bg-brand-200 text-brand-700 flex items-center justify-center transition-colors" aria-label="Próximo depoimento">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-          </button>
-        </div>
+        </a>
       </div>
     </div>
   </section>
@@ -527,8 +332,7 @@
               </div>
               <div>
                 <h4 class="font-serif text-xl mb-1">Localização</h4>
-                <p class="text-brand-200">Edifício Itatiba Hill</p>
-                <p class="text-brand-200">José Milton Pizzi, 126 - Sala 4, Vila Cristo Redentor - Centro, Itatiba - SP</p>
+                <p class="text-brand-200">Bairro Jardim Itatiba, Itatiba - SP</p>
               </div>
             </div>
 
@@ -542,7 +346,7 @@
               </div>
               <div>
                 <h4 class="font-serif text-xl mb-1">Email</h4>
-                <p class="text-brand-200">patyphpc200982@gmail.com</p>
+                <p class="text-brand-200">contato@patriciaribeiro.com</p>
               </div>
             </div>
 
@@ -556,7 +360,7 @@
               </div>
               <div>
                 <h4 class="font-serif text-xl mb-1">Telefone</h4>
-                <p class="text-brand-200">(11) 99309-1455</p>
+                <p class="text-brand-200">(11) 99999-9999</p>
               </div>
             </div>
           </div>
@@ -598,16 +402,22 @@
     <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
       <p class="text-sm">&copy; 2026 Patricia Ribeiro Psicanalise. Todos os direitos reservados.</p>
       <div class="flex space-x-4 mt-4 md:mt-0">
-        <a href="https://www.instagram.com/patriciaribeiropsicanalista" target="_blank" rel="noopener noreferrer" 
+        <a href="#" target="_blank" rel="noopener noreferrer" 
           class="w-10 h-10 bg-brand-800 hover:bg-gradient-to-r hover:from-purple-600 hover:to-pink-600 rounded-full flex items-center justify-center transition-all hover:scale-110 hover:shadow-lg group">
           <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
           </svg>
         </a>
-        <a href="https://pt-br.facebook.com/patriciaribeiro101281" target="_blank" rel="noopener noreferrer" 
+        <a href="#" target="_blank" rel="noopener noreferrer" 
           class="w-10 h-10 bg-brand-800 hover:bg-blue-600 rounded-full flex items-center justify-center transition-all hover:scale-110 hover:shadow-lg group">
           <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" 
+          class="w-10 h-10 bg-brand-800 hover:bg-blue-700 rounded-full flex items-center justify-center transition-all hover:scale-110 hover:shadow-lg group">
+          <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
           </svg>
         </a>
       </div>
@@ -618,11 +428,11 @@
   <a href="https://wa.me/5511993091455" target="_blank" rel="noopener noreferrer"
     class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full p-4 shadow-2xl transition-all hover:scale-110 flex items-center justify-center group animate-bounce-slow w-16 h-16">
     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-      <img src="dist/assets/whatsappLogo.svg" alt="WhatsApp" class="w-8 h-8">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414zM12.014 2.003C5.562 2.003.124 6.437.124 11.885c0 1.99.5 3.951 1.448 5.688L.057 24l6.305-1.654c1.737.948 3.698 1.447 5.688 1.448h.005c6.451 0 11.889-4.434 11.889-9.884-.003-5.448-5.441-9.881-11.929-9.887zm0 18.18c-1.737 0-3.448-.463-4.942-1.348l-.353-.208-3.675.963.963-3.675-.208-.353c-.885-1.494-1.348-3.205-1.348-4.942 0-4.632 3.77-8.402 8.402-8.402s8.402 3.77 8.402 8.402-3.77 8.402-8.402 8.402z" />
     </svg>
   </a>
 
-  <script type="module" src="/src/main.js"></script>
   <script>
     // Header Scroll Effect
     const header = document.getElementById('header');
